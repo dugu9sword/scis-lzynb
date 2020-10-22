@@ -1,0 +1,102 @@
+%-----------------------------------------------------------------------
+% Template File for Science China Information Sciences
+% Downloaded from http://scis.scichina.com
+% Please compile the tex file using LATEX or PDF-LATEX or CCT-LATEX
+%-----------------------------------------------------------------------
+
+\documentclass{SCIS2021}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Author's definitions for this manuscript
+%%% 作者附加的定义
+%%% 常用环境已经加载好, 不需要重复加载
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[flushleft]{threeparttable}
+\usepackage{CJK}
+% \usepackage{natbib}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{setspace}
+
+\newcommand{\ours}{LEMON }
+\newcommand{\oursp}{LEMON}
+\newcommand{\formula}{ }
+\newcommand{\reducebelow}{\setlength{\belowcaptionskip}{-15pt} }
+\newcommand{\reducetable}{
+    \setlength{\belowcaptionskip}{0pt} 
+    \setlength{\abovecaptionskip}{0pt} 
+}
+\bibliographystyle{unsrt}
+% \setcitestyle{numbers,open={[},close={]}}
+\newcommand{\bs}{\boldsymbol}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin. 开始
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+%\oa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Authors do not modify the information below
+%%% 作者不需要修改此处信息
+\ArticleType{RESEARCH PAPER}
+%\SpecialTopic{}
+%\luntan
+\Year{2020}
+\Month{}
+\Vol{}
+\No{}
+\DOI{}
+\ArtNo{}
+\ReceiveDate{}
+\ReviseDate{}
+\AcceptDate{}
+\OnlineDate{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% title: 标题
+%%%   \title{title}{title for citation}
+\title{Generating - - }{Generating - - }
+
+%%% Corresponding author: 通信作者
+%%%   \author[number]{Full name}{{email@xxx.com}}
+%%% General author: 一般作者
+%%%   \author[number]{Full name}{}
+\author{Author A}{}
+\author{Author B}{{_@fudan.edu.cn}}
+\author{Author C}{}
+
+%%% Author information for page head. 页眉中的作者信息
+\AuthorMark{Author A}
+
+%%% Authors for citation. 首页引用中的作者信息
+\AuthorCitation{Author A, Author B, Author C}
+
+%%% Authors' contribution. 同等贡献
+%\contributions{Authors A and B have the same contribution to this work.}
+
+%%% Address. 地址
+%%%   \address[number]{Affiliation, City {\rm Postcode}, Country} 
+7
+
+\address{School of Computer Science, Fudan University, Shanghai {\rm 200433}}
+% \address[2]{Affiliation, City {\rm 000000}, Country}
+% \address[3]{Affiliation, City {\rm 000000}, Country}
+
+%%% Abstract. 摘要
+\abstract{Recently, much efforts have been devoted to the response generation controlled in their emotion expressions or content topics. However, a little attention has been given to generating responses under a specified syntactic pattern, which makes it possible to imitate someone's way of speaking in dialog. We propose two approaches to generate syntax-aware responses: a gross-constraint and a specific-constraint model. The former controls the syntactic patterns of responses at sentence-level, while the latter works at smaller language units, such as words or phrases, being capable of manipulating the syntactic structures of responses in a more subtle manner. Experimental results show that both the models can not only generate meaningful responses with a specific and coherent structure, but also improve on the diversity of generated responses. }
+
+%%% Keywords. 关键词
+\keywords{controlled text generation,  syntax-aware text generation, dialogue system, neural network}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% The main text. 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+Syntactic structures have been recognized as one of important stylistic elements which can be used to characterize and identify speakers \cite{Kemper1987}. Detecting the differences in the syntax of speech and writing has proven helpful for tasks such as gender attribution \cite{Sarawgi2011GenderAT}, author attribution \cite{Raghavan2010author}, and native language identification \cite{Wong2011native}. Syntactic elements can reflect the speech habits of a speaker \cite{Feng2012stylish}. If we can generate meaningful responses conforming to prespecified syntactic forms in context, this makes it possible to build private customized dialogue systems that are able to imitate someone's way of speaking. For example, a lonely old father talks with a chatbot for comfort, and he hopes that the chatbot can not only mimic the voice of his son (which has become possible), but also imitate the way his son talks.
